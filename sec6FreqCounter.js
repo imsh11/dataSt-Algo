@@ -23,7 +23,7 @@ function sameFrequency(x, y){
             if (nums1[i] !== nums2[j]){
                 console.log('test01')
             }
-            return 
+            return true
         }
     }
     return false
