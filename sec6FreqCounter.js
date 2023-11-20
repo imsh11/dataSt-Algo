@@ -32,5 +32,5 @@ function sameFrequency(x, y){
 
 console.log(sameFrequency(182,281)) // true
 // console.log(sameFrequency(34,14)) // false
-// sameFrequency(3589578, 5879385) // true
+sameFrequency(3589578, 5879385) // true
 // sameFrequency(22,222) // false
