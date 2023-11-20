@@ -17,15 +17,16 @@ function sameFrequency(x, y){
     let nums2 = String(y)
     console.log(typeof(x), nums1,'testing')
     for (let i = 0; i<nums1.length; i++){
-        console.log(nums1[i])
+        console.log(nums1[i], '-----')
         for(let j=0; j<nums2.length; j++){
             console.log(nums2[j], 'testing-')
-            if (nums1[i] === nums2[j]){
-                return true
+            if (nums1[i] !== nums2[j]){
+                console.log('test01')
             }
+            return 
         }
-        return false
     }
+    return false
 }
 
 
