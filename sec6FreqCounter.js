@@ -44,21 +44,23 @@ const same = (arr1, arr2) =>{
     // mutating array messes things up
 
     for(let i=0; i<arr1.length; i++){
-        console.log(test, 'test')
+        // console.log(test, 'test')
         for(let j=0; j<arr2.length; j++){
             console.log(arr2[j], arr1[i], 'nums--')
-            if(arr1[i] ** 2 !== arr2[j]){
+            if(arr1[i] ** 2 === arr2[j]){
                 // let deleted = test.splice(i, 1)
-                console.log(i, 'hit')
+                arr2.splice(j, 1)
+                console.log(j, 'hit')
             }
             
-            // console.log(test, arr1, 'after splice')
+            console.log(test, arr2, 'after splice')
         }
         // console.log( test, 'first loop')
-        // if(!test.length) return true
+        if(!arr2.length) return true
     }
+    return false
 }
 
-console.log(same([1,2,3], [4,1,9])) //true
+console.log(same([1,2,3,1], [4,1,9])) //true
 // console.log(same([1,2,3], [1,9])) //false
 // console.log(same([1,2,1], [4,4,1])) //false
