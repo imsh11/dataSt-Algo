@@ -11,9 +11,10 @@ function samefn(arr1, arr2) {
 
     
     for(let val of arr1){
-        // console.log(frequency1[val] || 0)
-        console.log(val, '-----val')
+        console.log((frequency1[val] || 0), 'val----')
+        // console.log(val, '-----val')
         frequency1[val] = (frequency1[val] || 0) + 1
+        console.log(frequency1[val], 'val----after')
     }
     for(let val of arr2){
         frequency2[val] = (frequency2[val] || 0) + 1
@@ -22,10 +23,12 @@ function samefn(arr1, arr2) {
     console.log(frequency2)
 
     for (let key in frequency1){
-        // console.log(key, 'key in obj')
+        console.log(key, 'key in obj')
+        console.log('test1')
         if( !(key **2 in frequency2)){
             return false
         }
+        console.log('test---')
         if(frequency2[key ** 2] !== frequency1[key]){
             return false
         }
@@ -33,6 +36,6 @@ function samefn(arr1, arr2) {
     return true
 }
 
-console.log(samefn([1,2,2,3,3], [4,4,1,9,11])) //true
+console.log(samefn([1,2,2,3], [4,4,1,9])) //true
 // console.log(samefn([1,2,3], [1,9]))//false
 // console.log(samefn([1,2,1], [4,4,1])) //false
