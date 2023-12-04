@@ -34,10 +34,12 @@ const anagram = (x, y) => {
 
     for(key in obj1){
         // console.log(key)
+        // check if key exists
         if(!obj2[key]){
             return false
         }
 
+        // checks if values are same in both objects
         if(obj1[key] !== obj2[key]){
             return false
         }
