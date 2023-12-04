@@ -11,8 +11,8 @@ const sumZero = (arr) => {
     // return array with both values
     for(let i=0; i<arr.length; i++){
         let first = arr[i]
-        for(let j=1; j<arr.length; j++){
-            console.log(i, j, '-----test')
+        for(let j=i+1; j<arr.length; j++){
+            // console.log(i, j, '-----test')
             let second = arr[j]
 
             if(first + second === 0){
@@ -22,4 +22,5 @@ const sumZero = (arr) => {
     }
 }
 
-console.log(sumZero([-4,-3,-2,-1,0,1,2,3,10]))
+console.log(sumZero([-4,-3,-2,-1,0,1,2,3,10])) // [-3, 3]
+console.log(sumZero([-4,-3,-2,-1,0,10])) // undef
