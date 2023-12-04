@@ -14,7 +14,16 @@ const anagram = (x, y) => {
     let obj2 = {}
 
     for(let letter of x){
-        obj1[letter] = (obj1[letter] || 0) + 1
+        // shorter key-val assignment
+        // obj1[letter] = (obj1[letter] || 0) + 1
+
+        // detailed assignment
+        if(!obj1[letter]){
+            obj1[letter] = 1
+        }
+        else{
+            obj1[letter] += 1
+        }
     }
 
     for(let letter of y){
@@ -36,5 +45,5 @@ const anagram = (x, y) => {
     return true
 }
 
-console.log(anagram('aaz', 'azz')) //false
-// console.log(anagram('anagram', 'nagaram')) //true
+// console.log(anagram('aaz', 'azz')) //false
+console.log(anagram('anagram', 'nagaram')) //true
