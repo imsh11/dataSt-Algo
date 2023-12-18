@@ -7,29 +7,33 @@
 let countUnique = (x) => {
     // how many different values
     // if empty return 0
+    // have a variable out of loop for first value
     if (!x.length) return 0  // x lenght is 0
 
     let count = 1;//
-    let value
+    let value = x[0]
 
     for(let i=0; i<x.length; i++){ // loop through array
         // save val in a var
         // seperate count var
         let val = x[i]
         //
-        if (!value){ //
-            value = x[i] // value stuck at 1
-        }
+
+        // value = x[0] // would reassign every loop
+
+        // if (!value){ // 
+            // value = x[i] // value stuck at 1
+        // }
         console.log(val, value, 'values')
         if (val !== value){
-            val = value
+            value = val
             count++
-            console.log(val, count, 'in if !')
+            console.log(val, value,count, 'in if !')
         }
         // count var to 1
         // count = 1
     }
-    return count
+    return `the number of values are ${count}`
 }
 
 // console.log(countUnique([1,1,1,1,1,2])) // 2
